@@ -1,0 +1,32 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "jsx": true,
+    "useJSXTextNode": true
+  },
+  "extends": ["prettier", "react-app/jest"],
+  "plugins": ["@typescript-eslint", "prettier"],
+  // "ignorePatterns": ["deploy/**.js", "public/**"],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": [
+      "off",
+      {
+        "allowExpressions": true,
+        "allowTypedFunctionExpressions": true
+      }
+    ],
+    "@typescript-eslint/explicit-member-accessibility": [
+      "warn",
+      {
+        "accessibility": "no-public"
+      }
+    ],
+    "@typescript-eslint/explicit-module-boundary-types": ["off"],
+    "@typescript-eslint/interface-name-prefix": ["off"],
+    "@typescript-eslint/no-non-null-assertion": ["off"],
+    "@typescript-eslint/no-unused-vars": ["off"],
+    "@typescript-eslint/ban-ts-ignore": ["off"],
+    "@typescript-eslint/ban-types": ["off"],
+    "prettier/prettier": "warn"
+  }
+}
